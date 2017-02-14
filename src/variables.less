@@ -1,0 +1,124 @@
+/* CUSTOM COLORS
+------------------------------------*/
+@custom-black:			#000;
+@custom-white:			#fff;
+
+@custom-grey:			#eee;
+@custom-grey-light:		#f3f3f3;
+@custom-grey-dark:		#e8e8e8;
+@custom-grey-darker:	#979797;
+
+@custom-color-primary:		#5cb85c;
+@custom-color-secondary:	#5cb85c;
+@custom-color-third:		#5cb85c;
+
+@custom-success:         #5cb85c;
+@custom-info:            #5bc0de;
+@custom-warning:         #f0ad4e;
+@custom-error:          #d9534f;
+
+
+
+/* CUSTOM BODY
+------------------------------------*/
+@custom-body-bg:               @custom-white;
+@custom-body-text-color:       @custom-grey-dark;
+
+
+/* CUSTOM LINKS
+------------------------------------*/
+@custom-link-color:            @custom-color-primary;
+
+/* Link hover color set via `darken()` function */
+@custom-link-hover-color:      darken(@custom-link-color, 15%);
+
+@custom-link-active-color:      lighten(@custom-link-color, 15%);
+
+
+
+/* CUSTOM TYPOGRAPHY
+------------------------------------*/
+
+/* FONT FAMILY */
+@custom-font-family-base:  		"arial,helvetica,sans-serif;
+@custom-font-family-large: 		"arial,helvetica,sans-serif;
+@custom-font-family-small: 		"arial,helvetica,sans-serif;
+@custom-font-family-thin: 		arial,helvetica,sans-serif;
+
+/* FONT SIZE */
+@custom-font-size-base:          16px;
+@custom-font-size-large:         ceil((@custom-font-size-base * 1.25)); // ~18px
+@custom-font-size-small:         ceil((@custom-font-size-base * 0.85)); // ~12px
+
+@custom-font-size-h1:            floor((@custom-font-size-base * 2.6)); // ~36px
+@custom-font-size-h2:            floor((@custom-font-size-base * 2.15)); // ~30px
+@custom-font-size-h3:            ceil((@custom-font-size-base * 1.5)); // ~22px
+@custom-font-size-h4:            ceil((@custom-font-size-base * 1.25)); // ~18px
+@custom-font-size-h5:            @custom-font-size-base; // ~14px
+@custom-font-size-h6:            ceil((@custom-font-size-base * 0.85)); // ~12px
+
+
+
+/* CUSTOM VERTICAL GRID (BASELINE, LINEHEIGHT AND HEIGHT BLOCK)
+------------------------------------*/
+
+/* BASELINE */
+@custom-baseline:					22px;
+
+/* HEIGHT BASED ON BASELINE MULTIPLE */
+@custom-height-baseline:		@custom-baseline;
+@custom-height-baseline-2:		@custom-baseline * 2;   
+@custom-height-baseline-3:     	@custom-baseline * 3;
+@custom-height-baseline-4:     	@custom-baseline * 4;
+@custom-height-baseline-5:     	@custom-baseline * 5;
+@custom-height-baseline-6:     	@custom-baseline * 6;
+@custom-height-baseline-7:     	@custom-baseline * 7;
+@custom-height-baseline-8:     	@custom-baseline * 8;
+@custom-height-baseline-9:     	@custom-baseline * 9;
+@custom-height-baseline-10:    	@custom-baseline * 10;
+
+
+/* CUSTOM MARGIN, PADDING */
+
+@custom-space-vert:		ceil((@custom-baseline * 0.5));
+@custom-space-horiz:		ceil((@custom-baseline * 0.5));
+
+/* RADIUS */
+@custom-border-radius: 7px;
+
+
+
+/* CUSTOM HORIZONTAL  GRID : BREAKPOINTS
+------------------------------------*/
+
+/* Number of columns in the grid */
+@custom-grid-columns:              12;
+@grid-columns:              @custom-grid-columns;
+
+
+/* Padding between columns. Gets divided in half for the left and right */
+@custom-grid-gutter-width:         @custom-baseline;
+@grid-gutter-width:         @custom-grid-gutter-width;
+
+/* Extra Small screen / mobile */
+@custom-container-mobile:             (240px + @custom-grid-gutter-width);
+/* For `@custom-screen-sm-min` and up */
+@custom-container-xs:                 @custom-container-mobile;
+
+
+/* Small screen / tablet */
+@custom-container-tablet:             (720px + @custom-grid-gutter-width);
+/* For `@custom-screen-sm-min` and up */
+@custom-container-sm:                 @custom-container-tablet;
+
+/* Medium screen / desktop */
+@custom-container-desktop:            (940px + @custom-grid-gutter-width);
+/* For `@screen-md-min` and up */
+@custom-container-md:                 @custom-container-desktop;
+
+/* Large screen / wide desktop */
+@custom-container-large-desktop:      (1320px + @custom-grid-gutter-width);
+/* For `@screen-lg-min` and up */
+@custom-container-lg:                 @custom-container-large-desktop;
+
+
