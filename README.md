@@ -1,5 +1,5 @@
 # LESS custom micro framework 
-to customize css libraries like Bootstrap with custom LESS variables
+to customize css libraries like Bootstrap with custom LESS variables and partials
 
     Features :
         - variables template file
