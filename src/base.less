@@ -1,13 +1,31 @@
-/* VARIABLES
-------------------------------------*/
-
-@import 'variables.less';
-
 /* FONTS, TYPOGRAPHY, BASELINE & HEIGHT BLOCK
 ------------------------------------*/
 
-/* import fonts resources  */
-	@import 'font.less';
+
+
+
+/* BODY STYLE */
+
+/* @section body */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.sticky-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+}
+
+#maincontent{
+	margin-top : 60px;
+}
 
 
 /* TEXTS */
@@ -112,9 +130,80 @@ h6 {
 
 
 .fa-1-2x {
-font-size: 1.2em;
+	font-size: 1.2em;
 }
 
+/* COLORS */
+
+.color-orange {
+	color : @custom-orange;
+}
+
+.color-green {
+	color : @custom-color-primary;
+}
+
+.color-black {
+	color : @custom-black;
+}
+
+.color-grey {
+	color : @custom-grey;
+}
+
+.color-grey-light {
+	color : @custom-grey-light;
+}
+
+.color-grey-darker {
+	color : @custom-grey-darker;
+}
+
+.fill-grey-light{
+	background-color: @custom-grey-light;
+}
+
+
+.fill-grey-dark{
+	background-color: @custom-grey-dark;
+}
+
+.fill-primary {
+	background-color: @custom-color-primary;
+	color: @custom-white;
+	overflow: auto;
+	margin-left: @custom-space-horiz *-1;
+	margin-right: @custom-space-horiz *-1;
+	margin-bottom: @custom-space-vert;
+}
+.color-primary a {
+	color: @custom-white;
+	
+}
+
+
+.fill-primary-btn {
+	background-color: @custom-color-primary;
+	color: @custom-white;	
+}
+
+
+.success {
+	color : @custom-success;
+}
+.info {
+	color : @custom-info;
+}
+.warning {
+	color : @custom-warning;
+}
+.error {
+	color : @custom-error;
+}
+
+.color-white {
+	color : @custom-white;
+}
 
 /* BODY
 ------------------------------------*/
@@ -124,7 +213,7 @@ body {
 	font-size: @custom-font-size-base; // ~14px
 	line-height: @custom-baseline ; // ~22px
 	font-color: @custom-body-text-color;
-	background-color: @custom-body-bg;
+	/* background-color: @custom-body-bg; */
 }
 
 
@@ -135,6 +224,8 @@ body {
 ------------------------------------*/
 
 /* Extra Small screen / mobile */
+/* rules for very small mobile ( (320) < 480) */
+/* rules for medium mobile  (480 > 768)  */
 @media all and (max-width: 767px) {
 	.container {
 		width: 100%;
@@ -161,7 +252,8 @@ body {
 
 
 /* Small screen / tablet */
-@media all and (min-width: 768px) {
+/* rules for tablet & phablet (768 > 992) */
+@media all and (min-width: @custom-container-sm-min) {
 	.container {
 		width: 95%;
 	}
@@ -172,7 +264,8 @@ body {
 }
 
 /* Medium screen / desktop */
-@media all and (min-width: 992px) {
+/* rules for desktop (992 > 1200) */
+@media all and (min-width: @custom-container-md-min) {
 	.container {
 		width: 95%;
 	}
@@ -183,7 +276,8 @@ body {
 }
 
 /* Large screen / wide desktop */
-@media all and (min-width: 1200px) {
+/* rules for large (1200 > + 1800) */
+@media all and (min-width: @custom-container-lg-min) {
 	.container {
 		width: 90%;
 	}
@@ -194,8 +288,9 @@ body {
 }
 
 
-/* Large screen / wide desktop */
-@media all and (min-width: 1800px) {
+/* very Large screen / very wide desktop */
+/* rules for large (+1800) */
+@media all and (min-width: @custom-container-lg-max) {
 	.container {
 		width: 85%;
 	}
@@ -252,82 +347,7 @@ body {
     bottom: @custom-baseline;
 }
 
-.color-orange {
-	color : @custom-orange;
-}
 
-.color-green {
-	color : @custom-color-primary;
-}
-
-.color-black {
-	color : @custom-black;
-}
-
-.color-grey {
-	color : @custom-grey;
-}
-
-.color-grey-light {
-	color : @custom-grey-light;
-}
-
-.color-grey-darker {
-	color : @custom-grey-darker;
-}
-
-.fill-grey-light{
-	background-color: @custom-grey-light;
-}
-
-
-.fill-grey-dark{
-	background-color: @custom-grey-dark;
-}
-
-.fill-primary {
-	background-color: @custom-color-primary;
-	color: @custom-white;
-	overflow: auto;
-	margin-left: @custom-space-horiz *-1;
-	margin-right: @custom-space-horiz *-1;
-	margin-bottom: @custom-space-vert;
-}
-.fill-primary a {
-	color: @custom-white;
-	
-}
-
-
-.fill-primary-btn {
-	background-color: @custom-color-primary;
-	color: @custom-white;	
-}
-
-
-.highlight {
-	font-size: @custom-font-size-base + 1;
-	/* font-weight: bold; */
-
-}
-
-.success {
-	color : @custom-success;
-}
-.info {
-	color : @custom-info;
-}
-.warning {
-	color : @custom-warning;
-}
-.error {
-	color : @custom-error;
-}
-
-
-.color-white {
-	color : @custom-white;
-}
 
 
 /* HEIGHT BLOCK */
@@ -456,82 +476,6 @@ body {
 
 
 
-/* START SECTIONS FILES
-------------------------------------*/
-
-	/* header style  */
-	@import 'sections/header.less';
-
-		/* header topbar style  */
-		@import 'sections/header-topbar.less';
-
-		/* header brand style  */
-		@import 'sections/header-brand.less';
-
-		/* header account style  */
-		@import 'sections/header-account.less';
-
-		/* header navbar style  */
-		@import 'sections/header-navbar.less';
-
-	/* footer style  */
-	@import 'sections/footer.less';
-
-		/* footer copyright style  */
-		@import 'sections/footer-copyright.less';
-		
-		/* footer navbar style  */
-		@import 'sections/footer-navbar.less';
-
-	/* content style  */
-	@import 'sections/content.less';
-
-
-	/* aside style  */
-	@import 'sections/aside.less';
-	
-	
-	/* block style  */
-	@import 'sections/block.less';	
-
-/* END SECTIONS FILES
-------------------------------------*/
-
-
-
-/* START COMPONENTS FILES
-------------------------------------*/
-
-	/* logo style  */
-	@import 'components/logo.less';
-	
-	/* breadcrumb style  */
-	@import 'components/breadcrumb.less';
-	
-	/* button style  */
-	@import 'components/button.less';
-	
-	/* modal style  */
-	@import 'components/modal.less';
-	
-	/* badge style  */
-	@import 'components/badge.less';
-
-	/* form style  */
-	@import 'components/form.less';
-
-	/* tabs style  */
-	@import 'components/tab.less';
-	
-	/* tabs style  */
-	@import 'components/message.less';
-	
-	
-/* END COMPONENTS FILES
-------------------------------------*/
-
-/* import Fixes  */
-	@import 'fixes.less';
 
 
 
